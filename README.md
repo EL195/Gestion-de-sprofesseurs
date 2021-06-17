@@ -29,6 +29,6 @@ Mysql 5
 
 
 Manuel d'utilisation
-1. Créer d'abord un professeur avat tout chose
+1. Créer d'abord un professeur avant tout chose
 2. Enjoy
 
