@@ -15,9 +15,7 @@
 
 ### Credentials
 
-Pour tester l'application, la base de données est en train d'ensemencer avec les utilisateurs :
-
--   Admin 1 : email = hello@micheltanga.com, password = 12345678 and Role: Admin
+-   Admin 1 : email = hello@micheltanga.com, password = 12345678
 
 
 Votre serveur(Laragon) :
