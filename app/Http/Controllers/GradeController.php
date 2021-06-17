@@ -16,7 +16,7 @@ class GradeController extends Controller
      */
     public function index()
     {
-        $classes = Grade::withCount('students')->latest()->paginate(10);
+        $classes = Grade::latest()->paginate(10);
 
         return view('backend.classes.index', compact('classes'));
     }
@@ -135,7 +135,7 @@ class GradeController extends Controller
     public function assignSubject($classid)
     {
         $subjects   = Subject::latest()->get();
-        $assigned   = Grade::with(['subjects','students'])->findOrFail($classid);
+        $assigned   = Grade::with(['subjects'])->findOrFail($classid);
 
         return view('backend.classes.assign-subject', compact('classid','subjects','assigned'));
     }

@@ -13,10 +13,7 @@ class Grade extends Model
         'class_description'
     ];
 
-    public function students()
-    {
-        return $this->hasMany(Student::class,'class_id');
-    }
+  
 
     public function subjects()
     {

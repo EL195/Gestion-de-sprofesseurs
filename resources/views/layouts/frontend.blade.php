@@ -13,10 +13,9 @@
 </head>
 <body class="bg-gray-100 font-sans antialiased">
     <div id="app-2">
-
+        @auth
         @include('layouts.navbar')
-        
-        <div class="main flex flex-wrap justify-end mt-16">
+               <div class="main flex flex-wrap justify-end mt-16">
             
             <div class="content w-full">
                 <div class="container mx-auto p-4 sm:p-6">
@@ -27,6 +26,13 @@
             </div>
         </div>
     </div>
+        @endauth
 
+    <div id="app">
+       
+        <main class="">
+            @yield('content')
+        </main>
+    </div>
 </body>
 </html>

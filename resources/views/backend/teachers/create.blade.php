@@ -5,12 +5,12 @@
 
         <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="text-gray-700 uppercase font-bold">Create Teacher</h2>
+                <h2 class="text-gray-700 uppercase font-bold">Nouveau professeur</h2>
             </div>
             <div class="flex flex-wrap items-center">
                 <a href="{{ route('teacher.index') }}" class="bg-gray-200 text-gray-700 text-sm uppercase py-2 px-4 flex items-center rounded">
                     <svg class="w-3 h-3 fill-current" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="long-arrow-alt-left" class="svg-inline--fa fa-long-arrow-alt-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"></path></svg>
-                    <span class="ml-2 text-xs font-semibold">Back</span>
+                    <span class="ml-2 text-xs font-semibold">Retour</span>
                 </a>
             </div>
         </div>
@@ -21,7 +21,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Name
+                            Nom
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -47,7 +47,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Password
+                            Mot de passe
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -60,7 +60,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Phone
+                            Téléphone
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -73,22 +73,22 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Gender
+                            Genre
                         </label>
                     </div>
                     <div class="md:w-2/3">
                         <div class="flex flex-row items-center">
                             <label class="block text-gray-500 font-bold">
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="male">
-                                <span class="text-sm">Male</span>
+                                <span class="text-sm">Masculin</span>
                             </label>
                             <label class="ml-4 block text-gray-500 font-bold">
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="female">
-                                <span class="text-sm">Female</span>
+                                <span class="text-sm">Féminin</span>
                             </label>
                             <label class="ml-4 block text-gray-500 font-bold">
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="other">
-                                <span class="text-sm">Other</span>
+                                <span class="text-sm">Autre</span>
                             </label>
                         </div>
                         @error('gender')
@@ -99,7 +99,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Date of Birth
+                            Naissance
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -112,7 +112,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Current Address
+                            Adresse courante
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -125,7 +125,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Permanent Address
+                            Adresse permanente
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -138,7 +138,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Picture :
+                            Image :
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -150,7 +150,7 @@
                     <div class="md:w-1/3"></div>
                     <div class="md:w-2/3">
                         <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                            Create Teacher
+                            Créer
                         </button>
                     </div>
                 </div>

@@ -35,31 +35,11 @@ class HomeController extends Controller
         
         if ($user->hasRole('Admin')) {
 
-            $parents = Parents::latest()->get();
             $teachers = Teacher::latest()->get();
-            $students = Student::latest()->get();
 
-            return view('home', compact('parents','teachers','students'));
+            return view('home', compact('teachers'));
 
-        } elseif ($user->hasRole('Teacher')) {
-
-            $teacher = Teacher::with(['user','subjects','classes','students'])->withCount('subjects','classes')->findOrFail($user->teacher->id);
-
-            return view('home', compact('teacher'));
-
-        } elseif ($user->hasRole('Parent')) {
-            
-            $parents = Parents::with(['children'])->withCount('children')->findOrFail($user->parent->id); 
-
-            return view('home', compact('parents'));
-
-        } elseif ($user->hasRole('Student')) {
-            
-            $student = Student::with(['user','parent','class','attendances'])->findOrFail($user->student->id); 
-
-            return view('home', compact('student'));
-
-        } else {
+        }  else {
             return 'NO ROLE ASSIGNED YET!';
         }
         

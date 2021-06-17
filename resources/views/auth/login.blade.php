@@ -1,42 +1,49 @@
 @extends('layouts.frontend')
 
 @section('content')
+<div class="w-full flex flex-wrap">
+        <!-- Login Section -->
+        <div class="w-full md:w-1/2 flex flex-col">
+            <div  class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32" >
+                <p class="text-center text-3xl">{{ __('Connexion') }}</p>
+                  <form method="POST" action="{{ route('login') }}" class="flex flex-col pt-3 md:pt-8" >
+                        @csrf
+                    <div class="flex flex-col pt-4">
+                        <input style="border-radius: 30px!important;height: 60px;"  type="email" id="emailaddress" placeholder="your@email.com" class="rounded-2xl shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                         @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    </div>
+                     <div class="flex flex-col pt-4">
+                        <input style="border-radius: 30px!important;height: 60px;" type="password" id="password" placeholder="Mot de passe" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                        @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    </div>
 
-<div class="w-full max-w-xs mx-auto">
-    <form method="POST" action="{{ route('login') }}" class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4">
-        @csrf
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="emailaddress">
-                Email Address
-            </label>
-            <input class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" id="emailaddress" placeholder="email@example.com">
-            @error('email')
-                <p class="text-red-500 text-xs italic">{{ $message }}</p>
-            @enderror
+                  
+                    <input style="border-radius: 30px!important;height: 60px; background-color:#FFC000;" type="submit" value="{{ __('Connexion') }}" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8" >
+                </form>
+      
+            </div>
+
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                Password
-            </label>
-            <input class="shadow appearance-none border @error('password') border-red-500 @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="password" name="password" id="password" placeholder="******************">
-            @error('password')
-                <p class="text-red-500 text-xs italic">{{ $message }}</p>
-            @enderror
+
+        <!-- Image Section -->
+        <div class="w-1/2 shadow-2xl">
+            <img class="object-cover w-full h-screen hidden md:block" src="{{ asset('img/connexion.png') }}">
         </div>
-        <div class="mb-6">
-            <label class="block text-gray-500 font-bold">
-                <input class="mr-2 leading-tight" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                <span class="text-sm">
-                    Remember Me
-                </span>
-            </label>
-        </div>
-        <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                Sign In
-            </button>
-        </div>
-    </form>
-</div>
+    </div>
 
 @endsection
+
+
+
+
+
+
+
